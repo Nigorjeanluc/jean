@@ -1,0 +1,24 @@
+/* CSS Document */
+
+.pipClass { border:1px solid #fff; width:100%;}
+		  .PIPact { border:none;}
+		  div#pipNAv { position:fixed; height:100%; width:10%; min-width:10em; opacity:0.3;}
+		  div#pipNAv:hover { opacity:1;}
+		  div#pipBody 
+		  {  width:70%; margin:5em auto 5em auto; box-shadow:0em 0em 1em #fff; padding:2em; border-radius:2em; background-image:url(back_g.png);}
+div#new_display { background-color:#fff; width:100%; height: 80%; overflow:scroll; position: fixed; margin-left:0%; }
+div#new_display2 { position:fixed; margin-left:25%; opacity:0.5;}
+div#new_display2:hover {opacity:1;}
+div#new_display
+div#control
+{
+  width:10%;
+  height:40px;
+  background-color:#000;
+  position:fixed;
+  left:25%;
+  border-radius:5%; box-shadow:0 0 1em #666;
+}
+div#new_display
+div#control h5 { margin:0; padding:0; text-align:center; color:#FFFFFF; font-weight:bold;}
+div#new_display h4 { margin-top:10%;}

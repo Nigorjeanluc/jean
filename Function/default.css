@@ -1,0 +1,35 @@
+/* CSS Document */
+h3.slide_tit {  background-color:#fff; font-size:20px; position:absolute; z-index:1000; text-align:center; padding:10px; box-shadow:0px 0px 10px #fff; margin:1em; opacity:0.7; border-radius:10px;}
+article.mini-post, article.post2, section.post2 section,#header , .desiGN{ background-image:url(pipBack.png); border-radius:10px; box-shadow:0px 5px 5px #000;}
+article.mini-post h3, article.mini-post time,article.post2 a, article.post2 p { color:#FFFFFF;}
+body { 
+	background-image:url(baa1.jpg);
+	background-position: left top;
+}
+li.raed { background-color:#666666; color:#FFFFFF; padding:10px;}
+li.raed h3 { color:#FFFFFF;}
+#header a { color:#FFFFFF;}
+section.post2 section { margin-top:1em;}
+section.post2 ul li a{ background-color:#FFFFFF; border-radius:10px; box-shadow:0px 5px 5px #fff; padding:1em;}
+.text{
+font-size: large;
+display:block;
+margin-right: 30px;
+word-spacing: 0.5px;
+word-wrap: break-word;
+}
+.title{
+	text-align:center;
+	color: white;
+}
+.position{
+	margin-right:30px;
+}
+.comments{
+	color: white;
+	font-weight: italic;
+}
+ .borders {margin-top:2em; border:1px solid #fff; border-radius:1em; padding:1em; width:auto; background-image:url(Function/pipBack.png)}
+		  .bordright {border-right:0;}
+		  .bordleft {border-left:0;}
+		  h1.headingSS {color:#000099; font-size:18px; text-align:center; background-color:#FFFFFF;border-radius:1em; padding:0.5em;}
