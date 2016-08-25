@@ -44,7 +44,7 @@
 						<div style="max-width:1000px;margin-top:-20px;"  class="bigScreen">
 						<?php
 					
-					 include('connection2.php');
+					 include('connectio.php');
 											$pipsql = mysqli_query($conn,"SELECT * FROM publicity WHERE WHERETO = 'RECTANGLE : 1026x101' LIMIT 0,1");
 											 while($myrow = mysqli_fetch_array($pipsql)) echo '<a href="'.$myrow["URL_OF_PUB"].'"> <img src="'.$myrow["URL_PIC"].'"  width="1026" height="101" /></a>';
 								?>
