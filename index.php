@@ -34,17 +34,19 @@
 	<body>
 
 		<!-- Wrapper -->
+		<h1>www.kumateka.com</h1>
 			<div id="wrapper">
 
 				<?php include_once('navigation.php'); ?>
 
 				<!-- Main -->
 					<div id="main">
+						
 						<!--Advertsment1-->
 						<div style="max-width:1000px;margin-top:-20px;"  class="bigScreen">
 						<?php
 					
-					 include('connectio.php');
+					 include('connection2.php');
 											$pipsql = mysqli_query($conn,"SELECT * FROM publicity WHERE WHERETO = 'RECTANGLE : 1026x101' LIMIT 0,1");
 											 while($myrow = mysqli_fetch_array($pipsql)) echo '<a href="'.$myrow["URL_OF_PUB"].'"> <img src="'.$myrow["URL_PIC"].'"  width="1026" height="101" /></a>';
 								?>
