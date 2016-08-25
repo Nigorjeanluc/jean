@@ -34,7 +34,6 @@
 	<body>
 
 		<!-- Wrapper -->
-		<h1>www.kumateka.com</h1>
 			<div id="wrapper">
 
 				<?php include_once('navigation.php'); ?>
