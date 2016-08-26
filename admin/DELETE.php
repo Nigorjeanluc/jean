@@ -19,7 +19,7 @@ include("connection.php");
 if(isset($_REQUEST['hdfjafreuruqifhjak'])&&(isset($_REQUEST['wherewhere'])))
     {
 	 $table = $_REQUEST['wherewhere']; $id = $_REQUEST['hdfjafreuruqifhjak'];
-	 $s_ql = "DELETE FROM `rwandownload`.`".$table."` WHERE `".$table."`.`id` =".$id;
+	 $s_ql = "DELETE FROM `amateka`.`".$table."` WHERE `".$table."`.`id` =".$id;
 	 $situation = mysql_query($s_ql);
 	 if($situation)
 	 {

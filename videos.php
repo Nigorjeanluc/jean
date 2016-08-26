@@ -60,9 +60,9 @@
 		                                                       
 																if(isset($_REQUEST['artist']))
 																{
-																 include('connection.php');
-																$pipsql = mysql_query("SELECT * FROM videos WHERE id = ".$_REQUEST['id']." ORDER BY id DESC",$conn);
-																while($myrow = mysql_fetch_array($pipsql))
+																 include('connection2.php');
+																$pipsql = mysqli_query($conn,"SELECT * FROM videos WHERE id = ".$_REQUEST['id']." ORDER BY id DESC");
+																while($myrow = mysqli_fetch_array($pipsql))
 							   echo '
 							            <div class="video" style="background-color:transparent;height:auto;top:auto;bottom:0px; margin-left:3em;">
 																			<video controls loop data-autoplay="false"><source src="'.$myrow['Video_Url'].'" type="video/mp4" allowfullscreen></video>
@@ -75,15 +75,15 @@
 								<div class="slider-inner">
 									<ul>
 									  <?php
-											   include('connection.php');
-																$pipsql = mysql_query("SELECT * FROM videos ORDER BY id DESC",$conn);
+											   include('connection2.php');
+																$pipsql = mysqli_query($conn,"SELECT * FROM videos ORDER BY id DESC");
 																$count = 0;
 																$class = 'item active';
 																$pics = array("","","","","");
 																$title = array("","","","","");
 																$dates = array("","","","","");
 																$IDs = array("","","","","");
-																while(($myrow = mysql_fetch_array($pipsql))&&($count<5))
+																while(($myrow = mysqli_fetch_array($pipsql))&&($count<5))
 																{$pics[$count] = $myrow["icon_url"]; $title[$count] = $myrow["name"];
 																$IDs[$count] = $myrow["id"]; $videos[$count] = $myrow["Video_Url"];
 																$count++;}
@@ -119,9 +119,9 @@
 								<header>
 								<?php
 					
-					 include('connection.php');
-											$pipsql = mysql_query("SELECT * FROM publicity WHERE WHERETO = 'SQUARE : 299x169' LIMIT 0,1",$conn);
-											 while($myrow = mysql_fetch_array($pipsql)) echo "<a href=".$myrow['URL_OF_PUB']."><img src=".$myrow['URL_PIC']." width='299' height='169'/></a>";
+					 include('connection2.php');
+											$pipsql = mysqli_query($conn,"SELECT * FROM publicity WHERE WHERETO = 'SQUARE : 299x169' LIMIT 0,1");
+											 while($myrow = mysqli_fetch_array($pipsql)) echo "<a href=".$myrow['URL_OF_PUB']."><img src=".$myrow['URL_PIC']." width='299' height='169'/></a>";
 											 ?>
 								</header>
 					  </section>
@@ -136,9 +136,9 @@
 																
 																';
 																
-																 include('connection.php');
-																$pipsql = mysql_query('SELECT * FROM videos WHERE categorie = "'.$_REQUEST['type'].'" ORDER BY id DESC',$conn);
-																while($myrow = mysql_fetch_array($pipsql))
+																 include('connection2.php');
+																$pipsql = mysqli_query($conn,'SELECT * FROM videos WHERE categorie = "'.$_REQUEST['type'].'" ORDER BY id DESC');
+																while($myrow = mysqli_fetch_array($pipsql))
 							   echo '
 														<li class="raed">
 															<article>
@@ -165,9 +165,9 @@
 																
 																';
 																
-																 include('connection.php');
-																$pipsql = mysql_query('SELECT * FROM videos WHERE artist = "'.$_REQUEST['artist'].'" ORDER BY id DESC',$conn);
-																while($myrow = mysql_fetch_array($pipsql)){
+																 include('connection2.php');
+																$pipsql = mysqli_query($conn,'SELECT * FROM videos WHERE artist = "'.$_REQUEST['artist'].'" ORDER BY id DESC');
+																while($myrow = mysqli_fetch_array($pipsql)){
 							   echo '
 														<li class="raed">
 															<article>
@@ -191,9 +191,9 @@
 							<section>
 								<div class="mini-posts">
                                         <?php
-											include('connection.php');
-											$pipsql = mysql_query("SELECT * FROM videos ORDER BY id DESC LIMIT 0,10",$conn);
-											   while($myrow = mysql_fetch_array($pipsql))
+											include('connection2.php');
+											$pipsql = mysqli_query($conn,"SELECT * FROM videos ORDER BY id DESC LIMIT 0,10");
+											   while($myrow = mysqli_fetch_array($pipsql))
 											{
 											    echo
 												'
@@ -217,9 +217,9 @@
 							 <h1 class="headingSS">PUBS</h1>
 							<?php
 					
-					 include('connection.php');
-											$pipsql = mysql_query("SELECT * FROM publicity WHERE WHERETO = 'SQUARE : 299x169' LIMIT 5,6",$conn);
-											 while($myrow = mysql_fetch_array($pipsql)) echo "<a href=".$myrow['URL_OF_PUB']."><img src=".$myrow['URL_PIC']." width='299' height='169'/></a>";
+					 include('connection2.php');
+											$pipsql = mysqli_query($conn,"SELECT * FROM publicity WHERE WHERETO = 'SQUARE : 299x169' LIMIT 5,6");
+											 while($myrow = mysqli_fetch_array($pipsql)) echo "<a href=".$myrow['URL_OF_PUB']."><img src=".$myrow['URL_PIC']." width='299' height='169'/></a>";
 											 ?>
 								</div>
 								
@@ -230,8 +230,8 @@
 							<h1 class="headingSS">TOP 10 Stories</h1>
 								<ul class="posts">
 								   <?php
-											$pipsql = mysql_query("SELECT * FROM news ORDER BY inshuro DESC LIMIT 0,10",$conn);
-											while($myrow = mysql_fetch_array($pipsql))
+											$pipsql = mysqli_query($conn,"SELECT * FROM news ORDER BY inshuro DESC LIMIT 0,10");
+											while($myrow = mysqli_fetch_array($pipsql))
 											{
 											   echo '
 														<li class="raed">
@@ -257,9 +257,9 @@
 							 <h1 class="headingSS">PUBS</h1>
 							<?php
 					
-					 include('connection.php');
-											$pipsql = mysql_query("SELECT * FROM publicity WHERE WHERETO = 'SQUARE : 299x169' LIMIT 7,8",$conn);
-											 while($myrow = mysql_fetch_array($pipsql)) echo "<a href=".$myrow['URL_OF_PUB']."><img src=".$myrow['URL_PIC']." width='299' height='169'/></a>";
+					 include('connection2.php');
+											$pipsql = mysqli_query($conn,"SELECT * FROM publicity WHERE WHERETO = 'SQUARE : 299x169' LIMIT 7,8");
+											 while($myrow = mysqli_fetch_array($pipsql)) echo "<a href=".$myrow['URL_OF_PUB']."><img src=".$myrow['URL_PIC']." width='299' height='169'/></a>";
 											 ?>
 								</div>
 

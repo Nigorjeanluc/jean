@@ -15,7 +15,7 @@
 			 {
     		  	$username = $_POST['user'];
 				$password = $_POST['pass'];
-				include('connection2.php');
+				include('../connection2.php');
 				$Result=mysqli_query($conn,'SELECT * FROM users_accounts WHERE username="'.$username.'" AND password="'.$password.'"');
 				$result=mysqli_fetch_array($Result) or die('<h3 style="color:#ff0000; text-align:center"> Sorry your name or password was wrong!!!</h3><br /><a class="btn btn-primary"  href="index.php">
 				Go back!</a><br /><a class="btn btn-success"  href="index.php">Back home!</a>');
