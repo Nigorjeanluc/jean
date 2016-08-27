@@ -1,7 +1,7 @@
 <?php
-	$host="104.236.228.251";
+	$host="localhost";
 	$dbuser="root";
-	$dbpassword="nd210694";
+	$dbpassword="";//nd210694
 	$dbname="amateka";
 	$conn=mysqli_connect($host,$dbuser,$dbpassword,$dbname);
 	if(mysqli_connect_errno())

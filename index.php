@@ -1,12 +1,8 @@
+
 <!DOCTYPE HTML>
-<!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title> AMATEKA.COM </title>
+		<title>KUMATEKA.COM </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -65,14 +61,11 @@
 											$Resume = array("","","","","");
 											while(($myrow = mysqli_fetch_array($pipsql))&&($count<5))
 											{$pics[$count] = $myrow["top_pic"]; $title[$count] = $myrow["title"];
-											$IDs[$count] = $myrow["id"]; $dates[$count] = $myrow["date"]; 
-											
+											$IDs[$count] = $myrow["id"]; $dates[$count] = $myrow["date"];
 											$Comments[$count] = $myrow["comments"];
 											$Inshuro[$count] = $myrow["inshuro"];
 											$Categorie[$count] = $myrow["categorie"];
 											$Resume[$count] = $myrow["resume"];
-											
-											
 											$count++;}
 					
 					echo'
@@ -165,7 +158,7 @@
 														?></div>
 														<?php
 										include('connection2.php');
-										$pipsql = mysqli_query($conn,"SELECT * FROM news WHERE slides=0 ORDER BY id DESC LIMIT 0,4");
+										$pipsql = mysqli_query($conn,"SELECT * FROM news WHERE slides=0 ORDER BY id DESC LIMIT 0,3");
 						                $counting = 0;
 											while($myrow = mysqli_fetch_array($pipsql))
 											{
@@ -304,7 +297,6 @@
 								</div>
 								</section>
 								</article>
-
 							<div style="max-width:1000px;margin-top:-20px;margin-bottom:30px" class="bigScreen"> 
 						<?php
 					
@@ -321,7 +313,7 @@
 
 						<!-- Intro -->
 							<section id="intro">
-								<a href="#" class="logo"><img src="Function/logo.png"/></a>
+								<a href="#" class="logo"><img src="Function/logo.gif" width=50 height=80/></a>
 								<header>
 								<?php
 					

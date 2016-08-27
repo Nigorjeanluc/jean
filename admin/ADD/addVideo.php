@@ -8,7 +8,7 @@
      $CATEGORIE = $_POST['categorie'];
 	 $nAME2 = date('h').date('y').date('n').date('sa').'__'.(7+date('h')).(date('y')+7).(date('n')+7).(date('sa')+7);
      $YEAR = $_POST['YEAR'];
-     include('../connection.php');
+     include('connection.php');
 	 $targetFolder = "../uploads/vids/";
 	 $_url = "uploads/vids/";
 	 $targetFolder2 = $targetFolder.$NAME.$nAME2.'__Rwandownload.mp4';

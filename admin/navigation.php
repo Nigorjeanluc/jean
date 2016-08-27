@@ -4,7 +4,7 @@
  $limitt = 4;
  $str = "";
   $is_he_a_user = "no";
- $var = isset($_POST['okk']);
+ $var = isset($_POST['okk'])&&isset($_POST['user_S']);
    if($var) 
    {
    $is_he_a_user = $_POST['user_S'];
@@ -31,7 +31,7 @@
  {$mainMenu = array("HOME","DELETE","ADD");
  $limitt = 3;
  $is_he_a_user = "yes";
- $str = "&hdhd=dfdd";
+ $str = "&amp;hdhd=dfdd";
 echo ' <script>
  $(document).ready(function() 
 		            {

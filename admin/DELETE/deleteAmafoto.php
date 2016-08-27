@@ -15,7 +15,7 @@
 											}
 										}
 										     include('connection.php');
-											 $MyQuerry = "SELECT * FROM book  ORDER BY id DESC LIMIT $_start,$_end";
+											 $MyQuerry = "SELECT * FROM amafoto  ORDER BY id DESC LIMIT $_start,$_end";
 											if(isset($_REQUEST['type']))
 											  {$type = $_REQUEST['type']; $MyQuerry ="SELECT * FROM book WHERE categorie='$type' LIMIT $_start,$_end";}
 											$pipsql = mysql_query($MyQuerry,$conn);
@@ -27,10 +27,10 @@
 											$ids = array(" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ");
 											while(($myrow = mysql_fetch_array($pipsql))&&($count<16))
 											  {
-											     $name[$count] = $myrow['name'];
-												 $year[$count] = $myrow['year'];
-												 $categorie[$count] = $myrow['categorie'];
-												 $file[$count] = $myrow['file'];
+											     $name[$count] = $myrow['Title'];
+												 $year[$count] = $myrow['Other_Title'];
+												 $categorie[$count] = $myrow['Comments'];
+												 $file[$count] = $myrow['Images'];
 												 $ids[$count] = $myrow['id'];
 												 $count++;
 											  }
@@ -45,11 +45,12 @@
 															     echo " ";
 															   else
 															    echo '<div class="col-xs-6 col-md-3 text-center pip">
-																         <a href="DELETE.php?lll=Book&hdfjafreuruqifhjak='.$ids[$_echo].'&wherewhere=book" class="thumbnail">'.
+																         <a href="DELETE.php?lll=Book&hdfjafreuruqifhjak='.$ids[$_echo].'&wherewhere=book'.$str.'" class="thumbnail">'.
 																		 "<b>$name[$_echo]</b><br />
-									                                        year:<i style='color:orange;'>$year[$_echo]</i> <br />
-																			categorie:<i style='color:orange;'>$categorie[$_echo]</i>
+									                                        other title:<i style='color:orange;'>$year[$_echo]</i> <br />
+																			comments:<i style='color:orange;'>$categorie[$_echo]</i>
 																		</a>
+																		<img src='../".$file[$_echo]."' style=' width:100PX; HEIGHT:100px; position:absolute'/>
                                                                       </div>";
 															 }
 													echo '</div>';

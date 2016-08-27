@@ -27,7 +27,7 @@
 													 case 1 : 									   
 												  { echo '<td>
 												  <b>
-												  <a href="DELETE.php?lll=Music&hdfjafreuruqifhjak='.$myrow['id'].'&wherewhere=music">'.$myrow['artist']." - ".$myrow['name'].
+												  <a class="deleting" href="DELETE.php?lll=Music&hdfjafreuruqifhjak='.$myrow['id'].'&amp;wherewhere=music'.$str.'">'.$myrow['artist']." - ".$myrow['name'].
 												  "</a>
 												  </b>
 												  </td>" ; };
@@ -44,7 +44,6 @@
 												  }
 												  }
 												  echo "</tr>";
-											     
 											     $count++;
 											  }
 											  ?>

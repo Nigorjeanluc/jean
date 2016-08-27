@@ -32,7 +32,7 @@
 															     echo " ";
 															   else
 															    echo '<td>
-																         <a href="DELETE.php?lll=Video&hdfjafreuruqifhjak='.$id[$_echo].'&wherewhere=videos">'.
+																         <a href="DELETE.php?lll=Video&hdfjafreuruqifhjak='.$id[$_echo].'&wherewhere=videos'.$str.'">'.
 																		 "<img  src='../$file2[$_echo]' width='200' > 
 																			<p class='text-center'> $artist[$_echo] - $name[$_echo]</p></a></td>  
 																		    ";

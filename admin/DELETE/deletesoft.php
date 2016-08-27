@@ -45,7 +45,7 @@
 															     echo " ";
 															   else
 															    echo '<div class="col-xs-6 col-md-3 text-center pip">
-																         <a href="DELETE.php?lll=Soft&hdfjafreuruqifhjak='.$ids[$_echo].'&wherewhere=soft" class="thumbnail">'.
+																         <a href="DELETE.php?lll=Soft&hdfjafreuruqifhjak='.$ids[$_echo].'&wherewhere=soft'.$str.'" class="thumbnail">'.
 																		 "<b>$name[$_echo]</b><br />
 									                                        year:<i style='color:orange;'>$year[$_echo]</i> <br />
 																			categorie:<i style='color:orange;'>$categorie[$_echo]</i>

@@ -7,7 +7,7 @@
      $CATEGORIE = $_POST['categorie'];
      $YEAR = $_POST['YEAR'];
 	 $nAME2 = date('h').date('y').date('n').date('sa').'__'.(7+date('h')).(date('y')+7).(date('n')+7).(date('sa')+7);
-     include('../connection.php');
+     include('connection.php');
 	 $targetFolder = "../uploads/soft/";
 	 $folder = 'uploads/soft/';
 	 $folder = $folder.$NAME.$nAME2.'__Rwandownload.zip';

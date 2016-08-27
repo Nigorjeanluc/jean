@@ -1,6 +1,8 @@
-<!-- Header -->
+
 					<header id="header">
-						<h1><a href="<?php echo $_SERVER['PHP_SELF']; ?>"><img src="Function/logo2.png" width="150" height="50"/></a></h1>
+						<h1><a href="<?php echo $_SERVER['PHP_SELF']; ?>">
+						<img src="Function/logo2.png" width="150" height="50"/>
+						</a></h1>
 						<nav class="links">
 							<ul>
 								<li style=" background-image:url(Function/nav_back_home.png);background-repeat:no-repeat;">
@@ -16,7 +18,7 @@
 								   <li style=" background-image:url(Function/nav_back_videos.png);background-repeat:no-repeat;">
 								   <h2 style=" padding:0.2em 0.9em 0.2em 0.9em;"><a href="videos.php"><span style="visibility:hidden">AHABANZA</span></a></h2></li>
 								   <li style=" background-image:url(Function/nav_back_about.png);background-repeat:no-repeat;">
-								   <h2 style=" padding:0.2em 0.9em 0.2em 0.9em;"><a href="about.php"><span style="visibility:hidden">AHABANZA</span></a></h2></li>
+								   <h2 style=" padding:0.2em 0.9em 0.2em 0.9em;"><a href="about.php"><span style="visibility:hidden">AHABANZA</span></a></h2></li> 
 							</ul>
 						</nav>
 						<nav class="main">

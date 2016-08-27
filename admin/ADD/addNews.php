@@ -13,7 +13,7 @@
 	 if($slides=='yes')
 	    $slides = 1;
 	 else $slides = 0; 
-     include('../connection.php');
+     include('connection.php');
 	 $targetFolder = "../uploads/news/";
 	 $file_location = "uploads/news/";
 	 $picName = $_FILES['top_pic']['name'];

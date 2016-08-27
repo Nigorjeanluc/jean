@@ -1,12 +1,8 @@
 <!DOCTYPE HTML>
-<!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
-		<title> Amafoto </title>
+		<title>KUMATEKA.COM - Amafoto </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -34,13 +30,11 @@
 							</section>
 							
 							<section>
-									<h3>Image</h3>
-									<h4>Fit</h4>
 									<div class="box alt">
 									<div class="row uniform">
 									<?php
 											include("connection2.php");
-											$sql="SELECT * FROM videos ORDER BY id DESC LIMIT 0,20";
+											$sql="SELECT * FROM amafoto ORDER BY id DESC LIMIT 0,20";
 											$res=mysqli_query($conn,$sql);
 											if(!$res)
 											{
@@ -48,24 +42,26 @@
 											}
 																		$image = array(" "," "," "," "," "," "," "," "," ");
 																		$idx = array(" "," "," "," "," "," "," "," "," ");
+																		$alt = array(" "," "," "," "," "," "," "," "," ");
 																		$count = 0;
 											while(($row=mysqli_fetch_assoc($res))&&($count<9))
 																		  {
-																			 $image[$count] = $row['icon_url'];
+																			 $image[$count] = $row['Images'];
 																			 $idx[$count] = $row['id'];
+																			 $alt[$count] = $row['Title'];
 																			 $count++;
 																		  }
 											    echo
 												'
-											<div class="4u"><span class="image fit"><img src="'.$image[0].'" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="'.$image[1].'" alt="" /></span></div>
-											<div class="4u$"><span class="image fit"><img src="'.$image[2].'" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="'.$image[3].'" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="'.$image[4].'" alt="" /></span></div>
-											<div class="4u$"><span class="image fit"><img src="'.$image[5].'" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="'.$image[6].'" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="'.$image[7].'" alt="" /></span></div>
-											<div class="4u$"><span class="image fit"><img src="'.$image[8].'" alt="" /></span></div>
+											<div class="4u"><span class="image fit"><img src="'.$image[0].'" alt="'.$alt[0].'" title"'.$alt[0].'" /></span></div>
+											<div class="4u"><span class="image fit"><img src="'.$image[1].'" alt="'.$alt[1].'" title"'.$alt[1].'"  /></span></div>
+											<div class="4u$"><span class="image fit"><img src="'.$image[2].'" alt="'.$alt[2].'" title"'.$alt[2].'"  /></span></div>
+											<div class="4u"><span class="image fit"><img src="'.$image[3].'" alt="'.$alt[3].'" title"'.$alt[3].'"  /></span></div>
+											<div class="4u"><span class="image fit"><img src="'.$image[4].'" alt="'.$alt[4].'" title"'.$alt[4].'"  /></span></div>
+											<div class="4u$"><span class="image fit"><img src="'.$image[5].'" alt="'.$alt[5].'" title"'.$alt[5].'"  /></span></div>
+											<div class="4u"><span class="image fit"><img src="'.$image[6].'" alt="'.$alt[6].'" title"'.$alt[6].'"  /></span></div>
+											<div class="4u"><span class="image fit"><img src="'.$image[7].'" alt="'.$alt[7].'" title"'.$alt[7].'"  /></span></div>
+											<div class="4u$"><span class="image fit"><img src="'.$image[8].'" alt="'.$alt[8].'" title"'.$alt[8].'"  /></span></div>
 												'
 												;
 											?>
