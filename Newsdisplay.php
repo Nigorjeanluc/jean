@@ -61,7 +61,7 @@
 										$Email =  $_POST['email'] ;
 										$commentTT =  $_POST['textarea'];
 										$Where = $_POST['values'];
-										include('connection.php');
+										include('connection2.php');
 										$qry="INSERT INTO comments(name,tel,EEmail,commment,whrerere) values('$name','$phone','$Email','$commentTT','$Where')";
 										include('connection2.php');
 										$result=mysqli_query($conn,$qry);
@@ -74,23 +74,23 @@
 										{
 										   echo 'wapi';
 										}
-								include('connection.php');
+								include('connection2.php');
 											
 											if(isset($_REQUEST['hdfjafreuruqifhjak']))
 											  {$loop = $_REQUEST['hdfjafreuruqifhjak'];
-											 $pipsql = mysql_query("SELECT * FROM news WHERE id=$loop",$conn);
+											 $pipsql = mysqli_query($conn,"SELECT * FROM news WHERE id=$loop");
 											  $bool = true;}
 											else if(isset($_REQUEST['hdfjafreuruqifhj']))
 											 { $loop = $_REQUEST['hdfjafreuruqifhj'];
-											  $pipsql = mysql_query("SELECT * FROM news WHERE categorie='$loop'",$conn);
+											  $pipsql = mysqli_query($conn,"SELECT * FROM news WHERE categorie='$loop'");
 											  $bool = false;
 											  }
 											  else if(isset($_POST['okk']))
 											 { $loop = $_POST['hidethis'];
-											$pipsql = mysql_query("SELECT * FROM news WHERE id='$loop'",$conn);
+											$pipsql = mysqli_query($conn,"SELECT * FROM news WHERE id='$loop'");
 											  $bool = true;
 											  }
-											while($myrow = mysql_fetch_array($pipsql))
+											while($myrow = mysqli_fetch_array($pipsql))
 											{
 											echo '<ul class="media-list">';
 											if(!$bool)
@@ -117,7 +117,7 @@
 											      $inchuro = $myrow["inshuro"];
 												  $inchuro++;
 												  $_sql = 'UPDATE news SET inshuro='.$inchuro.' WHERE id='.$loop;
-												  mysql_query( $_sql, $conn ); 
+												  mysqli_query( $conn,$_sql); 
 											  echo '
 													      <div class="position">
 														  <h1 class="title">'.$myrow["title"].'</h1><br />
@@ -159,9 +159,9 @@
 								<h1  style="color:#FFFFFF; font-size: 18px;">Pub</h1>
 								<?php
 					
-					 include('connection.php');
-											$pipsql = mysql_query("SELECT * FROM publicity WHERE WHERETO = 'SQUARE : 299x169' LIMIT 1,4",$conn);
-											 while($myrow = mysql_fetch_array($pipsql)) echo '<a href="'.$myrow["URL_OF_PUB"].'"> <img src="'.$myrow["URL_PIC"].'"  width="299" height="169"/></a>';
+					 include('connection2.php');
+											$pipsql = mysqli_query($conn,"SELECT * FROM publicity WHERE WHERETO = 'SQUARE : 299x169' LIMIT 1,4");
+											 while($myrow = mysqli_fetch_array($pipsql)) echo '<a href="'.$myrow["URL_OF_PUB"].'"> <img src="'.$myrow["URL_PIC"].'"  width="299" height="169"/></a>';
 								?></div>
 								</div>
 												</section>
