@@ -10,8 +10,8 @@
 										     echo'
 											   <li class="media">
 											      <div class="media-left">
-													    <img class="media-object" src="../'.$myrow["top_pic"].'" alt="..." width="120" height="120">
-												     </a>
+													    <img class="media-object" src="../'.$myrow["top_pic"].'" alt="NO PICTURE" width="120" height="120">
+												    
 											      </div>
 											      <div class="media-body">';
 											echo '<br />';
