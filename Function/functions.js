@@ -17,5 +17,9 @@ $(document).ready(function()
 													  $("#AmatekaSlides div#slidingImg" + xxxx).css("display","block");
 													  xxx++;
 													  if(xxx == 2){ xxx = -1; }
-													  },3000)
+													  },3000);
+					var title ="Comment(s)";
+					var New = $("#uyunguyu").attr("value")+ " " + title;
+					//alert(New);
+					$("#title").html(New);
 					});

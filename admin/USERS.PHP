@@ -6,6 +6,18 @@
    if(isset($_REQUEST['lll'])) 
    {$from = $_REQUEST['lll'];}
 
+$booll = isset($_REQUEST["ppppd"]);
+   if($booll) {
+	   $iddd =  $_REQUEST["ppppd"];
+	    include('connection.php');
+		$pipsql = mysql_query("DELETE FROM `comments` WHERE ID='$iddd'",$conn);
+   }
+   $booll = isset($_REQUEST["ddddp"]);
+   if($booll) {
+	   $iddd =  $_REQUEST["ddddp"];
+	    include('connection.php');
+		$pipsql = mysql_query("UPDATE `comments` SET allow='yes' WHERE ID='$iddd'",$conn);
+   }
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta charset="utf-8">

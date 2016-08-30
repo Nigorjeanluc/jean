@@ -78,7 +78,7 @@ echo ' <script>
 		  echo '</p>';
 		} 
 	  else
-	    echo '<a href="'.$mainMenu[$v].'.php?'.$str.'" class="btn btn-link btn color glyphicon glyphicon-'.$CSSclass[$v].' pipClass"><b>'.$mainMenu[$v].'</b></a><br />';
+	    echo '<a href="'.$mainMenu[$v].'.php'.$str.'" class="btn btn-link btn color glyphicon glyphicon-'.$CSSclass[$v].' pipClass"><b>'.$mainMenu[$v].'</b></a><br />';
 	  }
    ?>
   </div>

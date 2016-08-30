@@ -21,7 +21,7 @@
 	 $file_location = $file_location.$TTLE.$nAME2.basename($_FILES['top_pic']['name']);
 	 $image_file_type = pathinfo($targetFolder,PATHINFO_EXTENSION);
 	 $sitiuation = move_uploaded_file($_FILES['top_pic']['tmp_name'],$targetFolder);
-	 if(!$sitiuation)
+	 if(!$move_uploaded_file($_FILES['top_pic']['tmp_name'],$targetFolder))
 	 {
 	   echo "Wapi bya Failinz  ".$_FILES['top_pic']['error'];
 	 }
