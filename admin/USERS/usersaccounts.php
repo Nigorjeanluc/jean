@@ -12,10 +12,10 @@
 										
 										<tbody>
 										<?php 
-										    include('connection.php');
-								            $pipsql = mysql_query("SELECT * FROM `users_accounts`",$conn);
+										    include('connection2.php');
+								            $pipsql = mysqli_query($conn,"SELECT * FROM `users_accounts`");
 											$count = 0;
-											while(($myrow = mysql_fetch_array($pipsql))&&($count<1000))
+											while(($myrow = mysqli_fetch_array($pipsql))&&($count<1000))
 											  {
 											  $categorie = $myrow['password'] ;
 											     echo "<tr>";
