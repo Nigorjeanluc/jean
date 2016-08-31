@@ -1,5 +1,5 @@
 
- <form  method="post" action="USERS.PHP">
+ <form  method="post" action="USERS.php">
 
 <div class="title"><h2>fill the forn</h2></div>
 	<div ><label> </label><div><input type="text" name="input" placeholder="name"/></div></div>
