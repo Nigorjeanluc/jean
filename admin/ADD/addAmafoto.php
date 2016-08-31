@@ -7,17 +7,15 @@
 			{
 			 	echo "Select an image Please!!!";
 			}else{
-				/*$image= addslashes($_FILES['image']['tmp_name']);
-				$name= addslashes ($_FILES['image']['name']);
-				$image= file_get_contents($image);
-				$image= base64_encode($image);*/
+				
 				$targetFolder = "uploads/amafoto/";
 				$file_location = "admin/uploads/amafoto/";
 				$name = $_FILES['image']['name'];
-				$targetFolder = $targetFolder.basename($_FILES['image']['name']);
-				$file_location = $file_location.basename($_FILES['image']['name']);
-				$image_file_type = pathinfo($targetFolder,PATHINFO_EXTENSION);
-				$sitiuation = move_uploaded_file($_FILES['image']['tmp_name'],$targetFolder);
+				$file_name = $_FILES['image']['name'];
+	            $file_tmp_name = $_FILES['image']['tmp_name'];
+				$targetFolder = $targetFolder.basename($file_name);
+				$file_location = $file_location.basename($file_name);
+				$sitiuation = move_uploaded_file($file_tmp_name,$targetFolder);
 				if(!$sitiuation)
 				{
 					echo "<h1 style='color:#000;'>Wapi bya Failinz  </h1>".$_FILES['image']['error'];
