@@ -13,7 +13,7 @@
 										<tbody>
 										<?php 
 										    include('connection2.php');
-								            $pipsql = mysqli_query($conn,"SELECT * FROM `users_accounts`");
+								            $pipsql = mysqli_query($conn,"SELECT * FROM users_accounts");
 											$count = 0;
 											while(($myrow = mysqli_fetch_array($pipsql))&&($count<1000))
 											  {
