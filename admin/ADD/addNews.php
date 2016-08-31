@@ -13,7 +13,7 @@
 	 if($slides=='yes')
 	    $slides = 1;
 	 else $slides = 0; 
-     include('connection.php');
+     include('connection2.php');
 	 $targetFolder = "../uploads/news/";
 	 $file_location = "uploads/news/";
 	 $picName = $_FILES['top_pic']['name'];
@@ -21,13 +21,13 @@
 	 $file_location = $file_location.$TTLE.$nAME2.basename($_FILES['top_pic']['name']);
 	 $image_file_type = pathinfo($targetFolder,PATHINFO_EXTENSION);
 	 $sitiuation = move_uploaded_file($_FILES['top_pic']['tmp_name'],$targetFolder);
-	 if(!$move_uploaded_file($_FILES['top_pic']['tmp_name'],$targetFolder))
+	 if(!$sitiuation)
 	 {
 	   echo "Wapi bya Failinz  ".$_FILES['top_pic']['error'];
 	 }
 	 else 
 	 { 
-	 mysql_query("INSERT INTO news(title,categorie,date,contents,resume,top_pic,slides,inshuro) 
+	 mysqli_query("INSERT INTO news(title,categorie,date,contents,resume,top_pic,slides,inshuro) 
 	              VALUES('$TTLE','$CATEGORIE','$date','$amakuru_arambuye','$INCHAMAKE','$file_location','$slides',0)");
 	 }
 	  

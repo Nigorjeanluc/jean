@@ -18,7 +18,7 @@ $(document).ready(function()
 													  xxx++;
 													  if(xxx == 2){ xxx = -1; }
 													  },3000);
-					var title ="Comment(s)";
+					var title =" Comment(s) ";
 					var New = $("#uyunguyu").attr("value")+ " " + title;
 					//alert(New);
 					$("#title").html(New);

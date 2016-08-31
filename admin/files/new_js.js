@@ -6,7 +6,7 @@ var t = 0;
 		   function()
 		   {
 		 
-		       var tt = document.createElement("input");
+		       /*var tt = document.createElement("input");
 			   var ttt = document.createAttribute("class");
 			   var tt_type = document.createElement("div");
 			   ttt.value = "form-control";
@@ -21,7 +21,7 @@ var t = 0;
 			   ttt.value = "otherPics" + t;
 			   tt.setAttributeNode(ttt);
 			   y.appendChild(tt);
-			   t++;
+			   t++;*/
 			   
 		   };
 var xx = function(v) { return document.getElementById(v);}
