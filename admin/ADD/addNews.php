@@ -5,7 +5,6 @@
    {
      $TTLE = $_POST['title'];
      $CATEGORIE = $_POST['categorie'];
-     $date = date('l')." ".date('y-m-n')." ".date("h:i:sa");
 	 $nAME2 = date('h').date('y').date('n').date('sa').'__'.(7+date('h')).(date('y')+7).(date('n')+7).(date('sa')+7);
 	 $INCHAMAKE = $_POST['inshamake'];
 	 $amakuru_arambuye = $_POST['amakuru_arambuye'];
@@ -13,22 +12,27 @@
 	 if($slides=='yes')
 	    $slides = 1;
 	 else $slides = 0; 
-     include('connection2.php');
-	 $targetFolder = "../uploads/news/";
+	 $file_name = $_FILES['top_pic']['name'];
+	 $file_tmp_name = $_FILES['top_pic']['tmp_name'];
+	 $nAME2 = date('h').date('y').date('n').date('sa').'__'.(7+date('h')).(date('y')+7).(date('n')+7).(date('sa')+7);
+     include('connection.php');
+	 $targetFolder = "../uploads/news/".$nAME2.basename($file_name);
+	 $sitiuation = move_uploaded_file($file_tmp_name,$targetFolder);
+	 $targetFolder = "uploads/news/".$nAME2.basename($file_name);
+	 /*$targetFolder = "../uploads/news/";
 	 $file_location = "uploads/news/";
 	 $picName = $_FILES['top_pic']['name'];
 	 $targetFolder = $targetFolder.$TTLE.$nAME2.basename($_FILES['top_pic']['name']);
 	 $file_location = $file_location.$TTLE.$nAME2.basename($_FILES['top_pic']['name']);
-	 $image_file_type = pathinfo($targetFolder,PATHINFO_EXTENSION);
-	 $sitiuation = move_uploaded_file($_FILES['top_pic']['tmp_name'],$targetFolder);
+	 $sitiuation = move_uploaded_file($_FILES['top_pic']['tmp_name'],$targetFolder);*/
 	 if(!$sitiuation)
 	 {
 	   echo "Wapi bya Failinz  ".$_FILES['top_pic']['error'];
 	 }
 	 else 
 	 { 
-	 mysqli_query("INSERT INTO news(title,categorie,date,contents,resume,top_pic,slides,inshuro) 
-	              VALUES('$TTLE','$CATEGORIE','$date','$amakuru_arambuye','$INCHAMAKE','$file_location','$slides',0)");
+	 mysql_query("INSERT INTO news(title,categorie,date,contents,resume,top_pic,slides,inshuro) 
+	              VALUES('$TTLE','$CATEGORIE',now(),'$amakuru_arambuye','$INCHAMAKE','$targetFolder','$slides',0)");
 	 }
 	  
    }

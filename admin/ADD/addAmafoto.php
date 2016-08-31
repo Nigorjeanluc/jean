@@ -1,6 +1,6 @@
 
  <?php
-		global $file_location;
+		$file_location;
 		 if(isset($_POST['Submit']))
 		 {
 			if(getimagesize($_FILES['image']['tmp_name'])== FALSE)
@@ -10,7 +10,6 @@
 				
 				$targetFolder = "uploads/amafoto/";
 				$file_location = "admin/uploads/amafoto/";
-				$name = $_FILES['image']['name'];
 				$file_name = $_FILES['image']['name'];
 	            $file_tmp_name = $_FILES['image']['tmp_name'];
 				$targetFolder = $targetFolder.basename($file_name);
@@ -20,11 +19,11 @@
 				{
 					echo "<h1 style='color:#000;'>Wapi bya Failinz  </h1>".$_FILES['image']['error'];
 				}else{
-					saveimage($name,$file_location);
+					saveimage($file_name,$file_location);
 				}
 			}
 		 }
-		 function saveimage($name,$file_location)
+		 function saveimage($file_name,$file_location)
 		 {
 		  	$Btitle= $_POST['BigTitle'];
 			$Stitle= $_POST['SmallTitle'];
