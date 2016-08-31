@@ -16,9 +16,9 @@
 	 $file_tmp_name = $_FILES['top_pic']['tmp_name'];
 	 $nAME2 = date('h').date('y').date('n').date('sa').'__'.(7+date('h')).(date('y')+7).(date('n')+7).(date('sa')+7);
      include('connection.php');
-	 $targetFolder = "../uploads/news/".$nAME2.basename($file_name);
+	 $targetFolder = "pubs/".$nAME2.basename($file_name);
 	 $sitiuation = move_uploaded_file($file_tmp_name,$targetFolder);
-	 $targetFolder = "uploads/news/".$nAME2.basename($file_name);
+	 $targetFolder = "admin/pubs/".$nAME2.basename($file_name);
 	 /*$targetFolder = "../uploads/news/";
 	 $file_location = "uploads/news/";
 	 $picName = $_FILES['top_pic']['name'];
