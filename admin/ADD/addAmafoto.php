@@ -12,7 +12,7 @@
 				$image= file_get_contents($image);
 				$image= base64_encode($image);*/
 				$targetFolder = "../uploads/amafoto/";
-				$file_location = "uploads/amafoto/";;
+				$file_location = "uploads/amafoto/";
 				$name = $_FILES['image']['name'];
 				$targetFolder = $targetFolder.basename($_FILES['image']['name']);
 				$file_location = $file_location.basename($_FILES['image']['name']);
