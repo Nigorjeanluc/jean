@@ -6,7 +6,7 @@
 						<nav class="links">
 							<ul>
 								<li style=" background-image:url(Function/nav_back_home.png);background-repeat:no-repeat;">
-								   <h2 style=" padding:0.2em 0.9em 0.2em 0.9em;"><a href="/amateka"><span style="visibility:hidden">AHABANZA</span></a></h2></li>
+								   <h2 style=" padding:0.2em 0.9em 0.2em 0.9em;"><a href="index.php"><span style="visibility:hidden">AHABANZA</span></a></h2></li>
 								   
 								<li style=" background-image:url(Function/nav_back_artist.png);background-repeat:no-repeat;">
 								   <h2 style=" padding:0.2em 0.9em 0.2em 0.9em;"><a href="artist.php"><span style="visibility:hidden">AHABANZA</span></a></h2></li>
