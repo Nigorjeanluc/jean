@@ -398,17 +398,26 @@
 					
 					 include('connection2.php');
 											$pipsql = mysqli_query($conn,"SELECT * FROM publicity WHERE WHERETO = 'SQUARE : 299x169' LIMIT 7,8");
-											 while($myrow = mysqli_fetch_array($pipsql)) echo "<a href=".$myrow['URL_OF_PUB']."><img src=".$myrow['URL_PIC']." width='299' height='169'/></a>";
+											 while($myrow = mysqli_fetch_array($pipsql)) echo "<p><a href=".$myrow['URL_OF_PUB']."><img src=".$myrow['URL_PIC']." width='200' height='169'/></a></p>";
 											 ?>
 								</div>
 
 						<!-- About -->
-						<div   class="borders bordleft">
-							<section class="blurb">
-								<h2>About</h2>
-								<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
+						<div  style="background-color:#000066; padding:10px;border-radius:1em"  class="bordleft">
+							<section>
+								<h2 style="color:#FFFFFF">About KUMATEKA</h2>
+								<p>
+									<h3  style="color:#FFFFFF">Politike</h3>
+									<p  style="color:#FFFFFF">Menya amakuru agezweho ajyanye na politike n'imiyoborere ku isi yose.</p>
+									<h3 style="color:#FFFFFF">Ubuzima</h3>
+									<p style="color:#FFFFFF">Menya uburyo wakwirinda cyangwa wakwivuza zimwe mu ndwara ndetse nuko wabungabunga ubuzima</p>
+									<h3 style="color:#FFFFFF">Imyidagaduro</h3>
+									<p style="color:#FFFFFF">Menya amakuru ya Sport, Abahanzi, Ibitaramo n'ibindi.</p>
+									<h3 style="color:#FFFFFF">Umuco</h3>
+									<p style="color:#FFFFFF">Menya ibyo hambere, umuco w'iwacu ndetse n'indi mico yo yanze igiye itandukanye</p>
+								</p>
 								<ul class="actions">
-									<li><a href="about.php" class="button">Learn More</a></li>
+									<li><a href="about.php" class="button"><p style="color:#2AFFFF">Learn More</p></a></li>
 								</ul>
 							</section>
 							</div>
